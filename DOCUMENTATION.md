@@ -22,7 +22,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - express
 - @types/express
 - ts-node
-= ts-node-dev
+- ts-node-dev
 
 ### Configuração Inicial
 
