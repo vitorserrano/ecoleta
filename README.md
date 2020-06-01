@@ -1,6 +1,8 @@
-<h1 align="center">
-    <img alt="Logo" title="#logo" width="300px" src=".github/Logo.png">
-</h1>
+<h3 align="center">
+    <img alt="Logo" title="#logo" width="300px" src=".github/logo.png">
+    <br><br>
+    <b>Recicle! ajude o meio ambiente!</b> 
+</h3>
 
 # Índice
 
