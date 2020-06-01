@@ -34,13 +34,13 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 
 ### TypeScript
 
-- Para utilizar **TypeScript** em qualquer projeto, precisamos instalar a sua própria dependência.
+- Para utilizar **TypeScript** em qualquer projeto precisamos instalar a sua própria dependência.
 
 ```sh
   $ npm install typescript
 ```
 
-- Após a intalação do pacote, podemos criar as configurações padrões para a utilização do typescript com o comando:
+- Após a intalação do pacote podemos criar as configurações padrões para a utilização do typescript com o comando:
 
 ```sh
   $ npx typescript --init
