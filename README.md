@@ -24,7 +24,7 @@ Essa aplicação foi construída na trilha <strong>Booster</strong> da <strong>N
 
 ## :books: Documentação
 
-Para reforçar alguns conceitos e registrar comandos que são dificeis de se lembrar eu fiz uma pequena **[DOCUMENTAÇÃO](DOCUMENTATION.md)** para ajudar quem esta iniciando com **TypeScript, **Node**, **ReactJS** e **React Native**. 
+Para reforçar alguns conceitos e registrar comandos que são dificeis de se lembrar eu fiz uma pequena **[DOCUMENTAÇÃO](DOCUMENTATION.md)** para ajudar quem esta iniciando com **TypeScript**, **Node**, **ReactJS** e **React Native**. 
 
 <a id="tecnologias-utilizadas"></a>
 
