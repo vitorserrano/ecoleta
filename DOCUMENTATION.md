@@ -48,7 +48,7 @@ Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois alé
   },
 ```
 
-- Para executar as migrations com o seguinte comando: `npm run knex:migrate`
+- Para executar as migrations utilize o comando: `npm run knex:migrate`
 
 3. Por fim, vamo configurar um script para excutar as seeds do banco de dados logo abaixo do `knex:migrate` dentro do `package.json`:
 
@@ -58,6 +58,8 @@ Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois alé
     "knex:seed": "knex --knexfile knexfile.ts seed:run"
   },
 ```
+
+- Para executar as seeds basta executar este comando: `npm run knex:seed`
 
 <a id="back-end"></a>
 
