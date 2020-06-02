@@ -70,6 +70,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
   ## Crie o banco de dados
   $ cd server
   $ npm run knex:migrate
+  $ npm run knex:seed
 
   # Inicie a API
   $ npm run dev
