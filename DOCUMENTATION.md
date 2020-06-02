@@ -39,7 +39,7 @@ Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois alé
   $ npm install knex
 ```
 
-2. Em seguida, podemos configurar um script para exutar as migrations mais fácilmente. Para isso, dentro do arquivo `package.json` adicione este comando:
+2. Em seguida, podemos configurar um script para executar as migrations de forma mais fácil. Para isso, dentro do arquivo `package.json` adicione este comando:
 
 ```json
   "scripts": {
