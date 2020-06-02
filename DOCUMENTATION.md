@@ -6,11 +6,12 @@
 
 # Índice
 
+- [Database](#database)
 - [Back-end](#back-end)
 - [Front-end](#tecnologias-utilizadas)
 - [Mobile](#como-usar)
 
-<a id="back-end"></a>
+<a id="database"></a>
 
 # 📄 Database
 
@@ -48,6 +49,8 @@ Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois alé
 ```
 
 3. Para utilizar criar as migrations, digite `npm run knex:migrate`
+
+<a id="back-end"></a>
 
 # 📃 Back-end
 
