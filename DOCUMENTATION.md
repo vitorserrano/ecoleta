@@ -17,12 +17,12 @@
 
 Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois além de ser **MySQL** ele não precisa de nenhum ambiente de configuração na máquina para rodar.
 
-## ⚡ Dependências
+## Dependências
 
 - sqlite3
 - knex
 
-### ✨ SQLite3
+### SQLite3
 
 - Primeiro precisamos instalar o pacote do **SQLite3** na nossa aplicação:
 
@@ -30,7 +30,7 @@ Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois alé
   $ npm install sqlite3
 ```
 
-### ✨ Knex
+### Knex
 
 - O **Knex** é um query builder que nos permite escrever comandos **SQL** com a sintaxe do **JavaScript**. Iremos utiliza-lo para manusear o banco de dados da aplicação.
 
@@ -67,15 +67,15 @@ Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois alé
 
 Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa aplicação, vamos precisar configurar e instalar alguns pacotes para o </strong>Node.js</strong> rodar junto ao <strong>TypeScript</strong>.
 
-## ⚡ Dependências
+## Dependências
 
 - typescript
-- express
-- @types/express
+- express / @types/express
 - ts-node
 - ts-node-dev
+- cors / @types/cors
 
-### ✨ Configuração Inicial
+### Configuração Inicial
 
 - Para iniciar qualquer projeto com <strong>Node.js</strong> você precisar criar o arquivo de configuração inicial `package.json`. Para isso, basta executar:
 
@@ -83,7 +83,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
   $ npm init -y
 ```
 
-### ✨ TypeScript
+### TypeScript
 
 - Para utilizar **TypeScript** em qualquer projeto precisamos instalar a sua própria dependência.
 
@@ -97,23 +97,20 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
   $ npx typescript --init
 ```
 
-### ✨ Express
+### Express
 
-- O express será o responsável pelo roteamento do nosso servidor.
+- O express será o responsável pelo roteamento do nosso servidor. Precisamos instalr o pacote padrão do express e também o @types, para utilizarmos com o TypeScript.
 
 ```sh
+  # Instação do express
   $ npm install express
-```
 
-### ✨ @types/express
-
-- Como a nossa aplicação irá utilizar **TypeScript** vamos precisar instalar o pacote de "tipagem" para o express. Pode-se notar que é passado `-D` pois será uma dependência apenas para o ambiente de desenvolvimento.
-
-```sh
+  # instalação do express com tipagem para TypeScript
   $ npm install @types/express -D
+
 ```
 
-### ✨ ts-node
+### ts-node
 
 - O **ts-node** serve para compilarmos através do **Node** arquivos **TypeScript**, pois o por padrão o **Node** executa somente **JavaScript**. Para isso, vamos instalar da seguinte forma:
 
@@ -121,7 +118,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
   $ npm install ts-node -D
 ```
 
-### ✨ ts-node-dev
+### ts-node-dev
 
 - O pacote **ts-node-dev** faz o monitoramento da pasta configurada, assim não precisamos executar `npx ts-node-dev src/server.ts` todas as vezes que fizermos alguma alteração no código.
 
@@ -138,3 +135,16 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 ```
 
 - Por fim, podemos executar o servidor dessa maneira: `npm run dev`. Dessa forma, sempre que houver alguma alteração do código, o **ts-node-dev** irá fazer a reinicialização automática.
+
+### CORS
+
+- O express será o responsável por permitir que outras urls acessem nossa API. Precisamos instalr o pacote padrão do cors e também o @types, para utilizarmos com o TypeScript.
+
+```sh
+  # Instação do express
+  $ npm install cors
+
+  # instalação do express com tipagem para TypeScript
+  $ npm install @types/cors -D
+
+```
