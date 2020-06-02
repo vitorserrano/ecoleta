@@ -12,11 +12,48 @@
 
 <a id="back-end"></a>
 
+# 📄 Database
+
+Na aplicação vamos utilizar o **SQLite3** para nosso banco de dados, pois além de ser **MySQL** ele não precisa de nenhum ambiente de configuração na máquina para rodar.
+
+## Dependências
+
+- sqlite3
+- knex
+
+### SQLite3
+
+- Primeiro precisamos instalar o pacote do **SQLite3** na nossa aplicação:
+
+```sh
+  $ npm install sqlite3
+```
+
+### Knex
+
+- O **Knex** é um query builder que nos permite escrever comandos **SQL** com a sintaxe do **JavaScript**. Iremos utiliza-lo para manusear o banco de dados da aplicação.
+
+1. Primeiro, vamos instalar o knex:
+
+```sh
+  $ npm install knex
+```
+
+2. Em seguida, podemos configurar um script para exutar as migrations mais fácilmente. Para isso, dentro do arquivo `package.json` adicione este comando:
+
+```json
+  "scripts": {
+    "knex:migrate": "knex migrate:latest --knexfile knexfile.ts migrate:latest"
+  },
+```
+
+3. Para utilizar criar as migrations, digite `npm run knex:migrate`
+
 # 📃 Back-end
 
 Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa aplicação, vamos precisar configurar e instalar alguns pacotes para o </strong>Node.js</strong> rodar junto ao <strong>TypeScript</strong>.
 
-## Pacotes
+## Dependências
 
 - typescript
 - express
