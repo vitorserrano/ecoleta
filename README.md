@@ -49,7 +49,9 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 - O layout está disponível no **[Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/)**;
 
-<img alt="Web" src=".github/VideoWeb.gif" width="500px">
+<h1 align="center">
+    <img alt="Web" src=".github/VideoWeb.gif" width="900px">
+</h1>
 
 <a id="como-usar"></a>
 
