@@ -45,6 +45,12 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - [ReactJS](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
 
+## :heavy_check_mark: Resultado:
+
+- O layout está disponível no **[Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/)**;
+
+<img alt="Web" src=".github/VideoWeb.gif" width="500px">
+
 <a id="como-usar"></a>
 
 ## :fire: Como usar
