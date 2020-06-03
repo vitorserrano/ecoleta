@@ -162,7 +162,7 @@ const CreatePoint = () => {
         </Link>
       </header>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} autoComplete="off">
         <h1>
           Cadastro do <br />
           ponto de coleta
