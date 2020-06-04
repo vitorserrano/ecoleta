@@ -2,10 +2,10 @@ import React from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   TouchableOpacity,
   ScrollView,
   Image,
+  SafeAreaView,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -27,8 +27,8 @@ const Points = () => {
   }
 
   return (
-    <>
-      <SafeAreaView style={styles.container}>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
         <TouchableOpacity onPress={handleNavigateBack}>
           <Feather name="arrow-left" color="#34CB79" size={24} />
         </TouchableOpacity>
@@ -69,7 +69,7 @@ const Points = () => {
             </Marker>
           </MapView>
         </View>
-      </SafeAreaView>
+      </View>
 
       <View style={styles.itemsContainer}>
         <ScrollView
@@ -81,7 +81,7 @@ const Points = () => {
             <SvgUri
               width={42}
               height={42}
-              uri="http://192.168.1.10:3333/uploads/baterias.svg"
+              uri="http://192.168.31.122:3333/uploads/baterias.svg"
             />
             <Text style={styles.itemTitle}>Baterias</Text>
           </TouchableOpacity>
@@ -90,7 +90,7 @@ const Points = () => {
             <SvgUri
               width={42}
               height={42}
-              uri="http://192.168.1.10:3333/uploads/baterias.svg"
+              uri="http://192.168.31.122:3333/uploads/baterias.svg"
             />
             <Text style={styles.itemTitle}>Baterias</Text>
           </TouchableOpacity>
@@ -99,7 +99,7 @@ const Points = () => {
             <SvgUri
               width={42}
               height={42}
-              uri="http://192.168.1.10:3333/uploads/baterias.svg"
+              uri="http://192.168.31.122:3333/uploads/baterias.svg"
             />
             <Text style={styles.itemTitle}>Baterias</Text>
           </TouchableOpacity>
@@ -108,7 +108,7 @@ const Points = () => {
             <SvgUri
               width={42}
               height={42}
-              uri="http://192.168.1.10:3333/uploads/baterias.svg"
+              uri="http://192.168.31.122:3333/uploads/baterias.svg"
             />
             <Text style={styles.itemTitle}>Baterias</Text>
           </TouchableOpacity>
@@ -117,7 +117,7 @@ const Points = () => {
             <SvgUri
               width={42}
               height={42}
-              uri="http://192.168.1.10:3333/uploads/baterias.svg"
+              uri="http://192.168.31.122:3333/uploads/baterias.svg"
             />
             <Text style={styles.itemTitle}>Baterias</Text>
           </TouchableOpacity>
@@ -126,13 +126,13 @@ const Points = () => {
             <SvgUri
               width={42}
               height={42}
-              uri="http://192.168.1.10:3333/uploads/baterias.svg"
+              uri="http://192.168.31.122:3333/uploads/baterias.svg"
             />
             <Text style={styles.itemTitle}>Baterias</Text>
           </TouchableOpacity>
         </ScrollView>
       </View>
-    </>
+    </SafeAreaView>
   );
 };
 
