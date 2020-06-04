@@ -172,7 +172,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 
 - O **React Icons** irá nos ajudar na utilização de ícones na aplicação web. Esse pacote é bem completo e conta com várias coleções de ícones fomosas como **Font Awesome**, **Feather Icons**, **Meterial Icons**, entre outros....
 
-- 1. Primeiro vamos instalar a dependência:
+1. Primeiro vamos instalar a dependência:
 
 ```sh
   $ npm install react-icons
