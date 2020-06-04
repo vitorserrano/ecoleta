@@ -70,10 +70,10 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 ## Dependências
 
 - typescript
-- express / @types/express
+- express | @types/express
 - ts-node
 - ts-node-dev
-- cors / @types/cors
+- cors | @types/cors
 
 ### Configuração Inicial
 
@@ -147,4 +147,75 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
   # instalação do express com tipagem para TypeScript
   $ npm install @types/cors -D
 
+```
+
+<a id="front-end"></a>
+
+# 🖥 Front-end
+
+## Dependências
+
+- react-icons
+- react-router-dom | @types/react-router-dom
+- leaflet | react-leaflet | @types/leaflet
+- axios
+
+### Criando o template React
+
+- Para iniciarmos a parte front-end vamos criar nosso ambiente com react utilizando typescript. Para isso, vamos executar o seguinte comando:
+
+```sh
+  $ npx create-react-app nomedapasta --template=typescript
+``` 
+
+### React Icons
+
+- O **React Icons** irá nos ajudar na utilização de ícones na aplicação web. Esse pacote é bem completo e conta com várias coleções de ícones fomosas como **Font Awesome**, **Feather Icons**, **Meterial Icons**, entre outros....
+
+- 1. Primeiro vamos instalar a dependência:
+
+```sh
+  $ npm install react-icons
+```
+
+2. Para usar é bem simples, vamos importar esse pacote no arquivo onde queremos adicionar os ícones. Note que após 'react-icons' é passado uma '/' e após essa barra você irá informar qual coleção de ícones irá utilizar. Por fim, pasta criar o component com o nome do ícone que você importou.
+
+```javascript
+  // Importação
+  import { FiArrowLeft } from 'react-icons/fi'
+
+  // Component
+  <FiArrowLeft size={32} color="#fff" />
+```
+
+### React Router DOM
+
+- O **React Router DOM** será responsável pelo roteamento da nossa aplicação web. para isso vamos fazer sua instalação e em seguida instalar sua tipagem.
+
+```sh
+  # Instação do react-router-dom
+  $ npm install react-router-dom
+
+  # instalação do react-router-dom com tipagem para TypeScript
+  $ npm install @types/react-router-dom -D
+```
+
+### Leaflet
+
+- Para manusearmos um mapa nós vamos utilizar o **Leaflet**. O **Leaflet** é uma alternativa open source para utilização de mapas com **javascript**. Para utilizarmos vamos precisar instalar o seu próprio pacote, o pacote para **ReactJS** e também o pacote de tipagems
+
+```sh
+  # Instação do leaflet e react-leaflet
+  $ npm install leaflet react-leaflet
+
+  # instalação do react-leaflet com tipagem para TypeScript
+  $ npm install @types/react-leaflet -D
+```
+
+### Axios
+
+- Por fim, vamos utilizar o **Axios** para realizar todas as requisições HTTP da nossa aplicação. É importante descatar que o axios também pode ser utilizar no **React Native**.
+
+```sh
+  $ npm install axios
 ```
