@@ -48,12 +48,19 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - [ReactJS](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
 
-## :heavy_check_mark: Resultado:
+## :heavy_check_mark: :computer: Resultado Web
 
 - O layout está disponível no **[Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/)**;
 
 <h1 align="center">
-    <img alt="Web" src=".github/VideoWeb.gif" width="900px">
+    <img alt="Web" src=".github/Video.gif" width="900px">
+</h1>
+
+## :heavy_check_mark: :iphone: Resultado Mobile
+
+<h1 align="center">
+    <img alt="Mobile Home" src=".github/Home.png" width="300px">
+    <img alt="Mobile Detail" src=".github/Detail.svg" width="300px">
 </h1>
 
 <a id="como-usar"></a>
