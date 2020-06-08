@@ -74,6 +74,8 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - ts-node
 - ts-node-dev
 - cors | @types/cors
+- multer | @types/multer
+- celebrate | @types/hapi__joi
 
 ### Configuração Inicial
 
@@ -102,7 +104,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - O express será o responsável pelo roteamento do nosso servidor. Precisamos instalr o pacote padrão do express e também o @types, para utilizarmos com o TypeScript.
 
 ```sh
-  # Instação do express
+  # Instalação do express
   $ npm install express
 
   # instalação do express com tipagem para TypeScript
@@ -141,11 +143,37 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - O express será o responsável por permitir que outras urls acessem nossa API. Precisamos instalr o pacote padrão do cors e também o @types, para utilizarmos com o TypeScript.
 
 ```sh
-  # Instação do express
+  # Instalação do express
   $ npm install cors
 
   # instalação do express com tipagem para TypeScript
   $ npm install @types/cors -D
+
+```
+
+### Multer
+
+- Vamos utilizar o **Multer** para realizar o upload de imagens. Com isso, nossa rota `PointsController.create` não terá mais o body em formato `json` e sim `multipart/form-data`, pois com `json` não é possível selecionar arquivos como imagens ou documentos.
+
+```sh
+  # Instalação do multer
+  $ npm install multer
+
+  # instalação do multer com tipagem para TypeScript
+  $ npm install @types/multer -D
+
+```
+
+### Celebrate
+
+- O **Celebrate** irá fazer a validação dos dados de entrada pelo back-end. Dessa forma conseguimos validar campos obrigatórios, campos que serão somente números, etc...
+
+```sh
+  # Instalação do express
+  $ npm install celebrate
+
+  # instalação do express com tipagem para TypeScript
+  $ npm install @types/hapi__joi -D
 
 ```
 
@@ -193,7 +221,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - O **React Router DOM** será responsável pelo roteamento da nossa aplicação web. para isso vamos fazer sua instalação e em seguida instalar sua tipagem.
 
 ```sh
-  # Instação do react-router-dom
+  # Instalação do react-router-dom
   $ npm install react-router-dom
 
   # instalação do react-router-dom com tipagem para TypeScript
@@ -205,7 +233,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - Para manusearmos um mapa nós vamos utilizar o **Leaflet**. O **Leaflet** é uma alternativa open source para utilização de mapas com **javascript**. Para utilizarmos vamos precisar instalar o seu próprio pacote, o pacote para **ReactJS** e também o pacote de tipagems
 
 ```sh
-  # Instação do leaflet e react-leaflet
+  # Instalação do leaflet e react-leaflet
   $ npm install leaflet react-leaflet
 
   # instalação do react-leaflet com tipagem para TypeScript
