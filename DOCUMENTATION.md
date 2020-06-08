@@ -169,10 +169,10 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - O **Celebrate** irá fazer a validação dos dados de entrada pelo back-end. Dessa forma conseguimos validar campos obrigatórios, campos que serão somente números, etc...
 
 ```sh
-  # Instalação do express
+  # Instalação do celebrate
   $ npm install celebrate
 
-  # instalação do express com tipagem para TypeScript
+  # instalação do @hapi/joi com tipagem para TypeScript
   $ npm install @types/hapi__joi -D
 
 ```
@@ -187,6 +187,7 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 - react-router-dom | @types/react-router-dom
 - leaflet | react-leaflet | @types/leaflet
 - axios
+- react-dropzone
 
 ### Criando o template React
 
@@ -242,8 +243,16 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 
 ### Axios
 
-- Por fim, vamos utilizar o **Axios** para realizar todas as requisições HTTP da nossa aplicação. É importante descatar que o axios também pode ser utilizar no **React Native**.
+- Também, vamos utilizar o **Axios** para realizar todas as requisições HTTP da nossa aplicação. É importante descatar que o axios também pode ser utilizar no **React Native**.
 
 ```sh
   $ npm install axios
+```
+
+### React Dropzone
+
+- Por fim, vamos utilizar o **React Dropzone** para conseguirmos lidar com seleção de arquivos ou drop de arquivo. 
+
+```sh
+  $ npm install react-dropzone
 ```
