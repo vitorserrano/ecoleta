@@ -256,3 +256,171 @@ Para iniciarmos com o desenvolvimento do <strong>Back-end</strong> da nossa apli
 ```sh
   $ npm install react-dropzone
 ```
+
+<a id="mobile"></a>
+
+# :iphone: Mobile
+
+## Dependências
+
+- expo-font
+- react-navigation
+- react-native-maps
+- react-native-svg
+- axios
+- expo-location
+- expo-mail-composer
+
+### Iniciando o projeto com expo
+
+- Primeiro, precisamos instalar o expo de forma global em nossa máquina.
+
+```sh
+  $ npm install -g expo-cli
+```
+
+- Em seguida, vamos iniciar nosso projeto expo.
+
+```sh
+  $ expo init nomedoseuprojeto
+```
+
+### Expo Fonts
+
+- Recentemente o **expo** lançou uma forma de utilizarmos fonts de um modo muito simples com o React Native. Primeiro, vamos instalar as fonts que iremos utilizar no nosso aplicativo.
+
+```sh
+  $ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
+```
+
+- Em seguida, vamos fazer o import dessas fonts no `App.tsx`.
+
+```javascript
+  import { Roboto_400Regular, Roboto_500Medium } from '@expo-google-fonts/roboto';
+
+  import { Ubuntu_700Bold, useFonts } from '@expo-google-fonts/ubuntu';
+```
+
+- Por fim, vamos criar uma constante e fazer uma validação. Se a constante criada não existir, vamos adicionar um Loading na tela, pois não queremos que o App seja utilizado sem as fonts personalizadas.
+
+```javascript
+  // Primeiro vamos importar nosso loading
+  import { AppLoading } from 'expo';
+
+  // Em seguida, vamos criar nossa constante
+  const [fontsLoaded] = useFonts({
+    Roboto_400Regular,  
+    Roboto_500Medium,
+    Ubuntu_700Bold,
+  });
+
+  // Por fim, vamos fazer a validação
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+```
+
+### React Navigation v5
+
+- Para criarmos o roteamento do nosso aplicativo, vamos utilizar o **React Navigation**.
+
+```sh
+  # Primeiros vamos instalar o pacote de navegação
+  $ npm install @react-navigation/native
+
+  # Em seguida, vamos instalar alguns components obrigatórios que estão na documentação
+  $ npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+  # Por fim, vamos instalar o tipo de navegação que iremos utilizar
+  $ npm install @react-navigation/stack
+```
+
+### React Native Maps
+
+- Vamos utilizar o **react-native-maps** para trabalharmos com mapas no React Native.
+
+```sh
+  $ npm install react-native-maps
+```
+
+### React Native SVG
+
+- Por padrão o React Native não suporte o formato `svg`. Então, vamos instalar um pacote para utilizarmos imagens `svg`
+
+```sh
+  $ expo install react-native-svg
+```
+
+- Após isso, vamos precisar importar o `SvgUri` e criar um component com esse mesmo nome, passando a propriedade `uri` com o local da imagem `svg`;
+
+```javascript
+  // Importação do component
+  import { SvgUri } from 'react-native-svg';
+
+  // Utilização do component
+  <SvgUri width={42} height={42} uri={item.image_url} />
+```
+
+### Axios
+
+- O axios será utilizado para realizarmos nossas requisições HTTP no aplicativo, assim como já fizemos no front-end web.
+
+```sh
+  $ npm install axios
+```
+
+### Expo Location
+
+- Com o **expo-location** nós conseguimos pegar a geolocalização do usuário. Dessa forma, podemos colocar no nosso mapa para iniciarmos o mapa na localização atual do usuário.
+
+```sh
+  $ expo install expo-location
+```
+
+- Para utilizarmos o **expo-location** precisamos pedir permissão para o usuário do app para compartilhar sua localização. Depois disso, vamos pegar a Posição do usuário e jogar em um estado do React para utilizarmos no mapa.
+
+```javascript
+    import * as Location from 'expo-location';
+
+    useEffect(() => {
+    async function loadPosition() {
+      const { status } = await Location.requestPermissionsAsync();
+
+      if (status !== 'granted') {
+        Alert.alert(
+          'Oops!',
+          'Precisamos da sua permissão para obter a localização'
+        );
+        return;
+      }
+
+      const location = await Location.getCurrentPositionAsync();
+
+      const { latitude, longitude } = location.coords;
+
+      setInitialPosition([latitude, longitude]);
+    }
+
+    loadPosition();
+  }, []);
+```
+
+### Expo Mail Composer
+
+- Por fim, vamos utilizar o **expo-mail-composer** para enviarmos um e-mail com o app nativo de e-mail do celular do usuário.
+
+
+```sh
+  $ expo install expo-mail-composer
+```
+
+- Depois de instalar o pacote, vamos criar uma função para o envio de e-mail
+
+```javascript
+    function handleComposeMail() {
+      MailComposer.composeAsync({
+        subject: 'Interesse na coleta de resíduos',
+        recipients: [data.point.email],
+      });
+    }
+```
